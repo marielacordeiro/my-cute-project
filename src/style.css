@@ -48,6 +48,17 @@ p {
   margin-top: 15px;
 }
 
+p.bottom {
+  text-align: center;
+  font-size: 14px;
+  margin: 5px;
+}
+
+a {
+  color: #8b92e8;
+  text-decoration: none;
+}
+
 .currentTemperature {
   position: relative;
   top: 37px;
