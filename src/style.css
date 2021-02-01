@@ -55,8 +55,12 @@ p.bottom {
 }
 
 a {
-  color: #8b92e8;
+  color: #8e97f2;
   text-decoration: none;
+}
+
+a:hover {
+  color: #8e97f2;
 }
 
 .currentTemperature {
@@ -86,11 +90,21 @@ a {
   display: block;
 }
 
+.active {
+  color: #ffff;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #ffff;
+}
+
 svg {
   margin: 5px;
   width: 50px;
   height: 50px;
-  fill: #9ea5f7;
+  fill: #8e97f2;
 }
 
 /* Thunder Bolt Animation */

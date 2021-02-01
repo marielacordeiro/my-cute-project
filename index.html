@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <form class="searchCity d-flex justify-content-center" id="search-form">
-                    <input class="form-control" type="text" placeholder="Search city here" id="search-text-input" />
+                    <input class="form-control" type="text" placeholder="Search city here" id="search-text-input" autocomplete="off" />
                     <button type="submit" class="btn btn-outline-light ml-2" id="buttonClick">
                         <i class="fas fa-search"></i>
                     </button>
@@ -57,7 +57,7 @@
             <div class="col-6 text-center">
                 <p>
                     <span class="currentTemperature" id="temperature">
-                    </span> ºC
+                    </span> <span class="units"><a href="#" id="celsius-link" class="active">ºC</a> | <a href="#" id="fahrenheit-link"> Fº</a></span>
                 </p>
             </div>
             <div class="weekDays">
@@ -284,7 +284,7 @@
         </div>
         <script src="src/index.js"></script>
 
-        <p class="bottom"><a href="https://github.com/marielacordeiro/my-cute-project">Open-source code</a> by Mariela Cordeiro</p>
+        <p class="bottom"><a href="https://github.com/marielacordeiro/my-cute-project" target="_blank">Open-source code</a> by Mariela Cordeiro</p>
 </body>
-
+ 
 </html>
