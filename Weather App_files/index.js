@@ -92,6 +92,9 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
 function searchLocation(position) {
   let apiKey = "e49f4dac5b0d3a8c77d299a55302727f";
   let lat = position.coords.latitude;
