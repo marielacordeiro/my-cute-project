@@ -31,6 +31,10 @@ function formatHours (timestamp) {
 
 }
 
+let currentTime = new Date();
+let h2 = document.querySelector("h2");
+h2.innerHTML = formatDate(currentTime);
+
 function showWeather(response) {
   console.log(response);
   document.querySelector("#cities").innerHTML = response.data.name;
@@ -50,6 +54,7 @@ function showWeather(response) {
   iconDisplay.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
+
 }
 
 function displayForecast (response) {
@@ -122,10 +127,6 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
-let h2 = document.querySelector("h2");
-let currentTime = new Date();
-h2.innerHTML = formatDate(currentTime);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
