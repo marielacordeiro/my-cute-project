@@ -1,6 +1,5 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -10,7 +9,7 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday"
   ];
-  let day = days[dayIndex];
+  let day = days[date.getDay()];
 
   return `${day} ${formatHours(timestamp)}`;
 }
@@ -36,7 +35,6 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = formatDate(currentTime);
 
 function showWeather(response) {
-  console.log(response);
   document.querySelector("#cities").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
